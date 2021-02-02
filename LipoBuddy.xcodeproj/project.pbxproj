@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F434A8025C9DEBC005259D9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F434A7E25C9DEBC005259D9 /* Model.xcdatamodeld */; };
+		4F434AB725C9E51C005259D9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F434AB625C9E51C005259D9 /* Persistence.swift */; };
+		4F51469625C9E6E90009D11B /* Battery+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F51469225C9E6E90009D11B /* Battery+CoreDataClass.swift */; };
+		4F51469725C9E6E90009D11B /* Battery+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F51469325C9E6E90009D11B /* Battery+CoreDataProperties.swift */; };
+		4F51469825C9E6E90009D11B /* BatteryType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F51469425C9E6E90009D11B /* BatteryType+CoreDataClass.swift */; };
+		4F51469925C9E6E90009D11B /* BatteryType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F51469525C9E6E90009D11B /* BatteryType+CoreDataProperties.swift */; };
 		4FD38D6A25C9CDC100E7B1A1 /* LipoBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */; };
 		4FD38D6C25C9CDC100E7B1A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD38D6B25C9CDC100E7B1A1 /* ContentView.swift */; };
 		4FD38D6E25C9CDC200E7B1A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD38D6D25C9CDC200E7B1A1 /* Assets.xcassets */; };
@@ -14,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F434A7F25C9DEBC005259D9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4F434AB625C9E51C005259D9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4F51469225C9E6E90009D11B /* Battery+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Battery+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4F51469325C9E6E90009D11B /* Battery+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Battery+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4F51469425C9E6E90009D11B /* BatteryType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BatteryType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4F51469525C9E6E90009D11B /* BatteryType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BatteryType+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4FD38D6625C9CDC100E7B1A1 /* LipoBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LipoBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipoBuddyApp.swift; sourceTree = "<group>"; };
 		4FD38D6B25C9CDC100E7B1A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +45,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F434A9425C9E309005259D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F51469225C9E6E90009D11B /* Battery+CoreDataClass.swift */,
+				4F51469325C9E6E90009D11B /* Battery+CoreDataProperties.swift */,
+				4F51469425C9E6E90009D11B /* BatteryType+CoreDataClass.swift */,
+				4F51469525C9E6E90009D11B /* BatteryType+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4FD38D5D25C9CDC100E7B1A1 = {
 			isa = PBXGroup;
 			children = (
@@ -52,11 +75,14 @@
 		4FD38D6825C9CDC100E7B1A1 /* LipoBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				4F434A9425C9E309005259D9 /* Model */,
 				4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */,
 				4FD38D6B25C9CDC100E7B1A1 /* ContentView.swift */,
 				4FD38D6D25C9CDC200E7B1A1 /* Assets.xcassets */,
 				4FD38D7225C9CDC200E7B1A1 /* Info.plist */,
 				4FD38D6F25C9CDC200E7B1A1 /* Preview Content */,
+				4F434A7E25C9DEBC005259D9 /* Model.xcdatamodeld */,
+				4F434AB625C9E51C005259D9 /* Persistence.swift */,
 			);
 			path = LipoBuddy;
 			sourceTree = "<group>";
@@ -139,7 +165,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD38D6C25C9CDC100E7B1A1 /* ContentView.swift in Sources */,
+				4F434AB725C9E51C005259D9 /* Persistence.swift in Sources */,
+				4F51469825C9E6E90009D11B /* BatteryType+CoreDataClass.swift in Sources */,
+				4F51469725C9E6E90009D11B /* Battery+CoreDataProperties.swift in Sources */,
 				4FD38D6A25C9CDC100E7B1A1 /* LipoBuddyApp.swift in Sources */,
+				4F434A8025C9DEBC005259D9 /* Model.xcdatamodeld in Sources */,
+				4F51469625C9E6E90009D11B /* Battery+CoreDataClass.swift in Sources */,
+				4F51469925C9E6E90009D11B /* BatteryType+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +360,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4F434A7E25C9DEBC005259D9 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4F434A7F25C9DEBC005259D9 /* Model.xcdatamodel */,
+			);
+			currentVersion = 4F434A7F25C9DEBC005259D9 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4FD38D5E25C9CDC100E7B1A1 /* Project object */;
 }

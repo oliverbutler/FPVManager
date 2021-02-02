@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Battery" representedClassName="Battery" syncable="YES">
+        <attribute name="capacity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="cellCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="createdTimestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="cycleCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="voltage" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <relationship name="batteryType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BatteryType"/>
+    </entity>
+    <entity name="BatteryType" representedClassName="BatteryType" syncable="YES">
+        <attribute name="cellChemistry" optional="YES" attributeType="String"/>
+        <attribute name="cellMaxVoltage" optional="YES" attributeType="Decimal" defaultValueString="0"/>
+        <attribute name="cellMinVoltage" optional="YES" attributeType="Decimal" defaultValueString="0"/>
+        <attribute name="cellStorageVoltage" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Battery" positionX="-87.93878173828125" positionY="-257.9769897460938" width="128" height="149"/>
+        <element name="BatteryType" positionX="245.3651123046875" positionY="-230.5053100585938" width="128" height="104"/>
+    </elements>
+</model>

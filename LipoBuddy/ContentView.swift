@@ -8,9 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+
+//    var batteries = [Int]();
+//    batteries.append(100);
+//    batteries.append(80);
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            VStack {
+                Text("LippoBuddy")
+                    .bold()
+                    .font(.system(size: 32))
+                    .padding()
+                
+                List {
+                    Text("battery 1")
+                    Text("battery 2")
+                }
+                
+                Spacer()
+                
+            }
+        }
     }
 }
 
@@ -19,3 +38,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
