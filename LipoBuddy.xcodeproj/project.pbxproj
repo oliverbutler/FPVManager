@@ -3,35 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4F434A8025C9DEBC005259D9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F434A7E25C9DEBC005259D9 /* Model.xcdatamodeld */; };
-		4F434AB725C9E51C005259D9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F434AB625C9E51C005259D9 /* Persistence.swift */; };
-		4F51469625C9E6E90009D11B /* Battery+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F51469225C9E6E90009D11B /* Battery+CoreDataClass.swift */; };
-		4F51469725C9E6E90009D11B /* Battery+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F51469325C9E6E90009D11B /* Battery+CoreDataProperties.swift */; };
-		4F51469825C9E6E90009D11B /* BatteryType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F51469425C9E6E90009D11B /* BatteryType+CoreDataClass.swift */; };
-		4F51469925C9E6E90009D11B /* BatteryType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F51469525C9E6E90009D11B /* BatteryType+CoreDataProperties.swift */; };
+		4F5146A325C9E9CA0009D11B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5146A225C9E9CA0009D11B /* Persistence.swift */; };
+		4F93A9AA25DF1EE700168835 /* Colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F93A9A925DF1EE700168835 /* Colours.xcassets */; };
 		4FD38D6A25C9CDC100E7B1A1 /* LipoBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */; };
 		4FD38D6C25C9CDC100E7B1A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD38D6B25C9CDC100E7B1A1 /* ContentView.swift */; };
 		4FD38D6E25C9CDC200E7B1A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD38D6D25C9CDC200E7B1A1 /* Assets.xcassets */; };
 		4FD38D7125C9CDC200E7B1A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD38D7025C9CDC200E7B1A1 /* Preview Assets.xcassets */; };
+		4FE7DFD22607F69E001B8C64 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7DFD12607F69E001B8C64 /* MainView.swift */; };
+		5EF60004FF0922493043EA40 /* Pods_LipoBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC62B1C24A6B63DE367FC729 /* Pods_LipoBuddy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F434A7F25C9DEBC005259D9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		4F434AB625C9E51C005259D9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		4F51469225C9E6E90009D11B /* Battery+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Battery+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4F51469325C9E6E90009D11B /* Battery+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Battery+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4F51469425C9E6E90009D11B /* BatteryType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BatteryType+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4F51469525C9E6E90009D11B /* BatteryType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BatteryType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4F5146A225C9E9CA0009D11B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4F93A9A925DF1EE700168835 /* Colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colours.xcassets; sourceTree = "<group>"; };
 		4FD38D6625C9CDC100E7B1A1 /* LipoBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LipoBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipoBuddyApp.swift; sourceTree = "<group>"; };
 		4FD38D6B25C9CDC100E7B1A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4FD38D6D25C9CDC200E7B1A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FD38D7025C9CDC200E7B1A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4FD38D7225C9CDC200E7B1A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FE7DFD12607F69E001B8C64 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		87765BD9C675B5CA80080719 /* Pods-LipoBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipoBuddy.debug.xcconfig"; path = "Target Support Files/Pods-LipoBuddy/Pods-LipoBuddy.debug.xcconfig"; sourceTree = "<group>"; };
+		BC62B1C24A6B63DE367FC729 /* Pods_LipoBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LipoBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB2808AFCFA43A839133025 /* Pods-LipoBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipoBuddy.release.xcconfig"; path = "Target Support Files/Pods-LipoBuddy/Pods-LipoBuddy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,21 +39,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF60004FF0922493043EA40 /* Pods_LipoBuddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F434A9425C9E309005259D9 /* Model */ = {
+		2FFB2EEA27E8E619F338E6CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4F51469225C9E6E90009D11B /* Battery+CoreDataClass.swift */,
-				4F51469325C9E6E90009D11B /* Battery+CoreDataProperties.swift */,
-				4F51469425C9E6E90009D11B /* BatteryType+CoreDataClass.swift */,
-				4F51469525C9E6E90009D11B /* BatteryType+CoreDataProperties.swift */,
+				BC62B1C24A6B63DE367FC729 /* Pods_LipoBuddy.framework */,
 			);
-			path = Model;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		4FD38D5D25C9CDC100E7B1A1 = {
@@ -61,6 +59,8 @@
 			children = (
 				4FD38D6825C9CDC100E7B1A1 /* LipoBuddy */,
 				4FD38D6725C9CDC100E7B1A1 /* Products */,
+				E1B03D6873305986ED16E5E7 /* Pods */,
+				2FFB2EEA27E8E619F338E6CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,14 +75,15 @@
 		4FD38D6825C9CDC100E7B1A1 /* LipoBuddy */ = {
 			isa = PBXGroup;
 			children = (
-				4F434A9425C9E309005259D9 /* Model */,
 				4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */,
 				4FD38D6B25C9CDC100E7B1A1 /* ContentView.swift */,
+				4FE7DFD12607F69E001B8C64 /* MainView.swift */,
 				4FD38D6D25C9CDC200E7B1A1 /* Assets.xcassets */,
 				4FD38D7225C9CDC200E7B1A1 /* Info.plist */,
 				4FD38D6F25C9CDC200E7B1A1 /* Preview Content */,
 				4F434A7E25C9DEBC005259D9 /* Model.xcdatamodeld */,
-				4F434AB625C9E51C005259D9 /* Persistence.swift */,
+				4F5146A225C9E9CA0009D11B /* Persistence.swift */,
+				4F93A9A925DF1EE700168835 /* Colours.xcassets */,
 			);
 			path = LipoBuddy;
 			sourceTree = "<group>";
@@ -95,6 +96,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E1B03D6873305986ED16E5E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87765BD9C675B5CA80080719 /* Pods-LipoBuddy.debug.xcconfig */,
+				EBB2808AFCFA43A839133025 /* Pods-LipoBuddy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FD38D7525C9CDC200E7B1A1 /* Build configuration list for PBXNativeTarget "LipoBuddy" */;
 			buildPhases = (
+				23EEFC401B9BF5E6973DBC4E /* [CP] Check Pods Manifest.lock */,
 				4FD38D6225C9CDC100E7B1A1 /* Sources */,
 				4FD38D6325C9CDC100E7B1A1 /* Frameworks */,
 				4FD38D6425C9CDC100E7B1A1 /* Resources */,
+				19E3C4640B7CA0F622E4DED7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -153,11 +165,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD38D7125C9CDC200E7B1A1 /* Preview Assets.xcassets in Resources */,
+				4F93A9AA25DF1EE700168835 /* Colours.xcassets in Resources */,
 				4FD38D6E25C9CDC200E7B1A1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19E3C4640B7CA0F622E4DED7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LipoBuddy/Pods-LipoBuddy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LipoBuddy/Pods-LipoBuddy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LipoBuddy/Pods-LipoBuddy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23EEFC401B9BF5E6973DBC4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LipoBuddy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4FD38D6225C9CDC100E7B1A1 /* Sources */ = {
@@ -165,13 +220,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD38D6C25C9CDC100E7B1A1 /* ContentView.swift in Sources */,
-				4F434AB725C9E51C005259D9 /* Persistence.swift in Sources */,
-				4F51469825C9E6E90009D11B /* BatteryType+CoreDataClass.swift in Sources */,
-				4F51469725C9E6E90009D11B /* Battery+CoreDataProperties.swift in Sources */,
+				4F5146A325C9E9CA0009D11B /* Persistence.swift in Sources */,
 				4FD38D6A25C9CDC100E7B1A1 /* LipoBuddyApp.swift in Sources */,
+				4FE7DFD22607F69E001B8C64 /* MainView.swift in Sources */,
 				4F434A8025C9DEBC005259D9 /* Model.xcdatamodeld in Sources */,
-				4F51469625C9E6E90009D11B /* Battery+CoreDataClass.swift in Sources */,
-				4F51469925C9E6E90009D11B /* BatteryType+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +348,7 @@
 		};
 		4FD38D7625C9CDC200E7B1A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87765BD9C675B5CA80080719 /* Pods-LipoBuddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +371,7 @@
 		};
 		4FD38D7725C9CDC200E7B1A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBB2808AFCFA43A839133025 /* Pods-LipoBuddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
