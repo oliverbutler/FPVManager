@@ -14,7 +14,6 @@
 		4FD38D6C25C9CDC100E7B1A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD38D6B25C9CDC100E7B1A1 /* ContentView.swift */; };
 		4FD38D6E25C9CDC200E7B1A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD38D6D25C9CDC200E7B1A1 /* Assets.xcassets */; };
 		4FD38D7125C9CDC200E7B1A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD38D7025C9CDC200E7B1A1 /* Preview Assets.xcassets */; };
-		4FE7DFD22607F69E001B8C64 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7DFD12607F69E001B8C64 /* MainView.swift */; };
 		5EF60004FF0922493043EA40 /* Pods_LipoBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC62B1C24A6B63DE367FC729 /* Pods_LipoBuddy.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		4FD38D6D25C9CDC200E7B1A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FD38D7025C9CDC200E7B1A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4FD38D7225C9CDC200E7B1A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FE7DFD12607F69E001B8C64 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		87765BD9C675B5CA80080719 /* Pods-LipoBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipoBuddy.debug.xcconfig"; path = "Target Support Files/Pods-LipoBuddy/Pods-LipoBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		BC62B1C24A6B63DE367FC729 /* Pods_LipoBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LipoBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB2808AFCFA43A839133025 /* Pods-LipoBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipoBuddy.release.xcconfig"; path = "Target Support Files/Pods-LipoBuddy/Pods-LipoBuddy.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 			children = (
 				4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */,
 				4FD38D6B25C9CDC100E7B1A1 /* ContentView.swift */,
-				4FE7DFD12607F69E001B8C64 /* MainView.swift */,
 				4FD38D6D25C9CDC200E7B1A1 /* Assets.xcassets */,
 				4FD38D7225C9CDC200E7B1A1 /* Info.plist */,
 				4FD38D6F25C9CDC200E7B1A1 /* Preview Content */,
@@ -222,7 +219,6 @@
 				4FD38D6C25C9CDC100E7B1A1 /* ContentView.swift in Sources */,
 				4F5146A325C9E9CA0009D11B /* Persistence.swift in Sources */,
 				4FD38D6A25C9CDC100E7B1A1 /* LipoBuddyApp.swift in Sources */,
-				4FE7DFD22607F69E001B8C64 /* MainView.swift in Sources */,
 				4F434A8025C9DEBC005259D9 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
