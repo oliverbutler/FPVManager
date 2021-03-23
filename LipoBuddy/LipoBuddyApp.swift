@@ -14,7 +14,7 @@ struct LipoBuddyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
                 .environment(\.managedObjectContext, persistenceContainer.container.viewContext )
         }
     }

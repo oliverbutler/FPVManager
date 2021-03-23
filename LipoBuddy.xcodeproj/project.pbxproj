@@ -11,9 +11,12 @@
 		4F5146A325C9E9CA0009D11B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5146A225C9E9CA0009D11B /* Persistence.swift */; };
 		4F93A9AA25DF1EE700168835 /* Colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F93A9A925DF1EE700168835 /* Colours.xcassets */; };
 		4FD38D6A25C9CDC100E7B1A1 /* LipoBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */; };
-		4FD38D6C25C9CDC100E7B1A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD38D6B25C9CDC100E7B1A1 /* ContentView.swift */; };
+		4FD38D6C25C9CDC100E7B1A1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD38D6B25C9CDC100E7B1A1 /* MainView.swift */; };
 		4FD38D6E25C9CDC200E7B1A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD38D6D25C9CDC200E7B1A1 /* Assets.xcassets */; };
 		4FD38D7125C9CDC200E7B1A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD38D7025C9CDC200E7B1A1 /* Preview Assets.xcassets */; };
+		4FE7DFD626096CB4001B8C64 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7DFD526096CB4001B8C64 /* SettingsView.swift */; };
+		4FE7DFD9260971B9001B8C64 /* BatteriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7DFD8260971B9001B8C64 /* BatteriesView.swift */; };
+		4FE7DFDC26097200001B8C64 /* UtilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7DFDB26097200001B8C64 /* UtilView.swift */; };
 		5EF60004FF0922493043EA40 /* Pods_LipoBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC62B1C24A6B63DE367FC729 /* Pods_LipoBuddy.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,10 +26,13 @@
 		4F93A9A925DF1EE700168835 /* Colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colours.xcassets; sourceTree = "<group>"; };
 		4FD38D6625C9CDC100E7B1A1 /* LipoBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LipoBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipoBuddyApp.swift; sourceTree = "<group>"; };
-		4FD38D6B25C9CDC100E7B1A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4FD38D6B25C9CDC100E7B1A1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4FD38D6D25C9CDC200E7B1A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FD38D7025C9CDC200E7B1A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4FD38D7225C9CDC200E7B1A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FE7DFD526096CB4001B8C64 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4FE7DFD8260971B9001B8C64 /* BatteriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteriesView.swift; sourceTree = "<group>"; };
+		4FE7DFDB26097200001B8C64 /* UtilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilView.swift; sourceTree = "<group>"; };
 		87765BD9C675B5CA80080719 /* Pods-LipoBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipoBuddy.debug.xcconfig"; path = "Target Support Files/Pods-LipoBuddy/Pods-LipoBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		BC62B1C24A6B63DE367FC729 /* Pods_LipoBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LipoBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB2808AFCFA43A839133025 /* Pods-LipoBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipoBuddy.release.xcconfig"; path = "Target Support Files/Pods-LipoBuddy/Pods-LipoBuddy.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,13 +80,16 @@
 			isa = PBXGroup;
 			children = (
 				4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */,
-				4FD38D6B25C9CDC100E7B1A1 /* ContentView.swift */,
+				4FD38D6B25C9CDC100E7B1A1 /* MainView.swift */,
+				4FE7DFD8260971B9001B8C64 /* BatteriesView.swift */,
 				4FD38D6D25C9CDC200E7B1A1 /* Assets.xcassets */,
 				4FD38D7225C9CDC200E7B1A1 /* Info.plist */,
 				4FD38D6F25C9CDC200E7B1A1 /* Preview Content */,
 				4F434A7E25C9DEBC005259D9 /* Model.xcdatamodeld */,
 				4F5146A225C9E9CA0009D11B /* Persistence.swift */,
 				4F93A9A925DF1EE700168835 /* Colours.xcassets */,
+				4FE7DFD526096CB4001B8C64 /* SettingsView.swift */,
+				4FE7DFDB26097200001B8C64 /* UtilView.swift */,
 			);
 			path = LipoBuddy;
 			sourceTree = "<group>";
@@ -120,6 +129,8 @@
 			dependencies = (
 			);
 			name = LipoBuddy;
+			packageProductDependencies = (
+			);
 			productName = LipoBuddy;
 			productReference = 4FD38D6625C9CDC100E7B1A1 /* LipoBuddy.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +158,8 @@
 				Base,
 			);
 			mainGroup = 4FD38D5D25C9CDC100E7B1A1;
+			packageReferences = (
+			);
 			productRefGroup = 4FD38D6725C9CDC100E7B1A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -216,7 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FD38D6C25C9CDC100E7B1A1 /* ContentView.swift in Sources */,
+				4FE7DFD626096CB4001B8C64 /* SettingsView.swift in Sources */,
+				4FD38D6C25C9CDC100E7B1A1 /* MainView.swift in Sources */,
+				4FE7DFDC26097200001B8C64 /* UtilView.swift in Sources */,
+				4FE7DFD9260971B9001B8C64 /* BatteriesView.swift in Sources */,
 				4F5146A325C9E9CA0009D11B /* Persistence.swift in Sources */,
 				4FD38D6A25C9CDC100E7B1A1 /* LipoBuddyApp.swift in Sources */,
 				4F434A8025C9DEBC005259D9 /* Model.xcdatamodeld in Sources */,

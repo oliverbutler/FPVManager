@@ -9,8 +9,10 @@ import Foundation
 import CoreData
 
 struct PersistenceController {
+    // Singleton for the whole app
     static let shared = PersistenceController()
     
+    // Storage for Core Data
     let container: NSPersistentContainer
     
     init() {
@@ -22,4 +24,17 @@ struct PersistenceController {
             }
         }
     }
+    
+    func save() {
+        let context = container.viewContext
+
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                // Show some error here
+            }
+        }
+    }
+    
 }
