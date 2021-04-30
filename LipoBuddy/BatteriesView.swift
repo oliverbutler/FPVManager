@@ -7,27 +7,27 @@
 
 import SwiftUI
 
+/**
+    Row which is displayed to represent a single battery shows "charged" value based upon the limits of a specific batteries type.
+ */
 struct BatteryRow: View {
     @ObservedObject var batt: Battery
-    var cellVoltage: Float
     
     init(batt: Battery) {
         self.batt = batt;
-        self.cellVoltage = batt.voltage / Float(batt.cellCount);
     }
     
     var body: some View {
         HStack {
             Text(String(batt.number))
-            if cellVoltage > 3.7 && cellVoltage < 3.9 {
+            if batt.cellVoltage > 3.7 && batt.cellVoltage < 3.9 {
                 Image(systemName: "battery.25").foregroundColor(.yellow)
-            } else if cellVoltage > 3.85 {
+            } else if batt.cellVoltage > 3.85 {
                 Image(systemName: "battery.100").foregroundColor(.green)
             } else {
                 Image(systemName: "battery.0").foregroundColor(.red)
             }
-            
-            Text(String(format: "%.2fV", cellVoltage))
+            Text(String( format: "%.2fV", batt.cellVoltage))
             Spacer()
             Text(String(format: "%.2fV", batt.voltage))
             Text(String(batt.capacity) + "mAh")
@@ -36,17 +36,22 @@ struct BatteryRow: View {
     }
 }
 
+/**
+    View to create a new Battery
+ */
 struct NewBatteryView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    @FetchRequest(entity: BatteryType.entity(), sortDescriptors: [])
+    var batteryTypes: FetchedResults<BatteryType>
     
     @State var batteryId: String = ""
     @State var batteryCapacity: String = ""
     @State var batteryCellCount = 4;
     @State var batteryVoltage: String = ""
     
-    @State private var typeIndex = 0
-    var type = ["LiPo", "LiHV", "Li-ion"]
+    @State var selectedBatteryType: BatteryType? = nil;
     
     var body: some View {
         Form {
@@ -59,9 +64,9 @@ struct NewBatteryView: View {
             }
             
             Section(header: Text("TYPE")) {
-                Picker(selection: $typeIndex, label: Text("Show Types")) {
-                    ForEach(0 ..< type.count) {
-                        Text(self.type[$0])
+                Picker(selection: $selectedBatteryType, label: Text("Show Types")) {
+                    ForEach(batteryTypes, id: \.self) { bt in
+                        Text(bt.name ?? "Unknown").tag(bt as BatteryType?)
                     }
                 }
                 
@@ -72,9 +77,10 @@ struct NewBatteryView: View {
                 }) {
                     Text("Create new Battery")
                 }
-                .disabled(batteryId == "" || batteryVoltage == "" || batteryCapacity == "")
+                .disabled(batteryId == "" || batteryVoltage == "" || batteryCapacity == "" || selectedBatteryType == nil)
             }
         }
+        .navigationTitle("New Battery")
     }
     
     private func addBattery(number: String, cellCount: String, capacity: String, voltage: String) {
@@ -88,6 +94,8 @@ struct NewBatteryView: View {
             newBattery.cycleCount = 0
             newBattery.notes = ""
             newBattery.voltage = Float(voltage) ?? 0
+            
+            newBattery.batteryType = selectedBatteryType
             
             PersistenceController.shared.save();
             
@@ -121,20 +129,25 @@ struct BatteryView: View {
     
     var body: some View {
         VStack {
-            Image("auline_500")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 100, height: 100)
-                .clipped()
+            
             Form {
+                HStack {
+                    Spacer()
+                    Image("auline_500")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 100, height: 100)
+                        .clipped()
+                    Spacer()
+                }
                 Section(header: Text("BATTERY")) {
+                    
                     StaticTextField(title: "ID", value: String(battery.number))
                     StaticTextField(title: "Capacity", value: String(battery.capacity) + "mAh")
-                    StaticTextField(title: "Type", value: "LiPo")
+                    StaticTextField(title: "Type", value: String(battery.batteryType?.name ?? "Unknown"))
                     StaticTextField(title: "Cell Count", value: String(battery.cellCount) + "S")
                     StaticTextField(title: "Pack Voltage", value: String(format: "%.02f", battery.voltage) + "V")
                     StaticTextField(title: "Cell Voltage", value: String(format: "%.02f", battery.voltage / Float(battery.cellCount)) + "V")
-                    
                     
                 }
                 Section(header: Text("ACTIONS")) {
@@ -155,6 +168,7 @@ struct BatteryView: View {
                 }
             }
         }
+        .navigationTitle("Battery " + String(battery.number))
     }
 }
 
@@ -197,7 +211,7 @@ struct BatteryUpdateVoltageView: View {
                 }
             }
         }
-        
+        .navigationTitle("Update Voltage")
     }
 }
 
@@ -236,13 +250,12 @@ struct InputFlightView: View {
                     
                 }
             }
-        }
+        }.navigationTitle("New Flight")
     }
 }
 
 
 struct BatteriesView: View {
-    
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity: Battery.entity(), sortDescriptors: [])
     private var batteries: FetchedResults<Battery>
@@ -259,23 +272,52 @@ struct BatteriesView: View {
     
     var body: some View {
         List {
-            ForEach(batteries) { b in
+            ForEach(batteries, id: \.self) { b in
                 NavigationLink(destination: BatteryView(battery: b)) {
                     BatteryRow(batt: b)
                 }
             }.onDelete(perform: deleteBattery)
         }
-    }
-}
-
-struct BatteriesView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            MainView()
-                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
-                .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+        .navigationTitle("Batteries")
+        .toolbar {
+            NavigationLink(destination: NewBatteryView()) {
+                Image(systemName: "plus.circle")
+            }
         }
     }
 }
 
-
+struct BatteriesViewManual: View {
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    var batteries: Array<Battery>
+    var title: String
+    
+    
+    private func deleteBattery(offsets: IndexSet) {
+        withAnimation {
+            offsets.map {
+                batteries[$0]
+            }.forEach(viewContext.delete)
+            
+            PersistenceController.shared.save();
+        }
+    }
+    
+    var body: some View {
+        List {
+            ForEach(batteries, id: \.self) { b in
+                NavigationLink(destination: BatteryView(battery: b)) {
+                    BatteryRow(batt: b)
+                }
+            }.onDelete(perform: deleteBattery)
+        }
+        .navigationTitle(title)
+        .toolbar {
+            NavigationLink(destination: NewBatteryView()) {
+                Image(systemName: "plus.circle")
+            }
+        }
+    }
+}

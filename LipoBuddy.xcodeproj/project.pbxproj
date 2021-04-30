@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F434A8025C9DEBC005259D9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F434A7E25C9DEBC005259D9 /* Model.xcdatamodeld */; };
+		4F20BB04263C68B8005E370F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F20BB01263C68B8005E370F /* Model.xcdatamodeld */; };
+		4F20BB0C263C6A5A005E370F /* LipoBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F20BB0B263C6A5A005E370F /* LipoBuddyTests.swift */; };
+		4F3D9D98260A9FB4006EF2DF /* BatteryTypeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3D9D97260A9FB4006EF2DF /* BatteryTypeListView.swift */; };
 		4F5146A325C9E9CA0009D11B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5146A225C9E9CA0009D11B /* Persistence.swift */; };
+		4F775454263B545E00C5F8A0 /* Battery+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F775452263B545E00C5F8A0 /* Battery+CoreDataClass.swift */; };
+		4F775455263B545E00C5F8A0 /* Battery+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F775453263B545E00C5F8A0 /* Battery+CoreDataProperties.swift */; };
 		4F93A9AA25DF1EE700168835 /* Colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F93A9A925DF1EE700168835 /* Colours.xcassets */; };
 		4FD38D6A25C9CDC100E7B1A1 /* LipoBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */; };
 		4FD38D6C25C9CDC100E7B1A1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD38D6B25C9CDC100E7B1A1 /* MainView.swift */; };
@@ -17,12 +21,31 @@
 		4FE7DFD626096CB4001B8C64 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7DFD526096CB4001B8C64 /* SettingsView.swift */; };
 		4FE7DFD9260971B9001B8C64 /* BatteriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7DFD8260971B9001B8C64 /* BatteriesView.swift */; };
 		4FE7DFDC26097200001B8C64 /* UtilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7DFDB26097200001B8C64 /* UtilView.swift */; };
+		4FE7DFE9260A5CB3001B8C64 /* AircraftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7DFE8260A5CB3001B8C64 /* AircraftView.swift */; };
+		4FF432F1263C439A005DFA88 /* BatteryUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF432F0263C439A005DFA88 /* BatteryUtil.swift */; };
 		5EF60004FF0922493043EA40 /* Pods_LipoBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC62B1C24A6B63DE367FC729 /* Pods_LipoBuddy.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4F20BB0E263C6A5A005E370F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FD38D5E25C9CDC100E7B1A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FD38D6525C9CDC100E7B1A1;
+			remoteInfo = LipoBuddy;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		4F434A7F25C9DEBC005259D9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4F20BB02263C68B8005E370F /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		4F20BB03263C68B8005E370F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4F20BB09263C6A5A005E370F /* LipoBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LipoBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F20BB0B263C6A5A005E370F /* LipoBuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipoBuddyTests.swift; sourceTree = "<group>"; };
+		4F20BB0D263C6A5A005E370F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F3D9D97260A9FB4006EF2DF /* BatteryTypeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryTypeListView.swift; sourceTree = "<group>"; };
 		4F5146A225C9E9CA0009D11B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4F775452263B545E00C5F8A0 /* Battery+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Battery+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		4F775453263B545E00C5F8A0 /* Battery+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Battery+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		4F93A9A925DF1EE700168835 /* Colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colours.xcassets; sourceTree = "<group>"; };
 		4FD38D6625C9CDC100E7B1A1 /* LipoBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LipoBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipoBuddyApp.swift; sourceTree = "<group>"; };
@@ -33,12 +56,21 @@
 		4FE7DFD526096CB4001B8C64 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4FE7DFD8260971B9001B8C64 /* BatteriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteriesView.swift; sourceTree = "<group>"; };
 		4FE7DFDB26097200001B8C64 /* UtilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilView.swift; sourceTree = "<group>"; };
+		4FE7DFE8260A5CB3001B8C64 /* AircraftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftView.swift; sourceTree = "<group>"; };
+		4FF432F0263C439A005DFA88 /* BatteryUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryUtil.swift; sourceTree = "<group>"; };
 		87765BD9C675B5CA80080719 /* Pods-LipoBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipoBuddy.debug.xcconfig"; path = "Target Support Files/Pods-LipoBuddy/Pods-LipoBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		BC62B1C24A6B63DE367FC729 /* Pods_LipoBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LipoBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB2808AFCFA43A839133025 /* Pods-LipoBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipoBuddy.release.xcconfig"; path = "Target Support Files/Pods-LipoBuddy/Pods-LipoBuddy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4F20BB06263C6A5A005E370F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4FD38D6325C9CDC100E7B1A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,10 +90,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4F20BB0A263C6A5A005E370F /* LipoBuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F20BB0B263C6A5A005E370F /* LipoBuddyTests.swift */,
+				4F20BB0D263C6A5A005E370F /* Info.plist */,
+			);
+			path = LipoBuddyTests;
+			sourceTree = "<group>";
+		};
+		4F3D9D96260A9F9E006EF2DF /* Battery */ = {
+			isa = PBXGroup;
+			children = (
+				4F3D9D97260A9FB4006EF2DF /* BatteryTypeListView.swift */,
+				4FF432F0263C439A005DFA88 /* BatteryUtil.swift */,
+			);
+			path = Battery;
+			sourceTree = "<group>";
+		};
 		4FD38D5D25C9CDC100E7B1A1 = {
 			isa = PBXGroup;
 			children = (
 				4FD38D6825C9CDC100E7B1A1 /* LipoBuddy */,
+				4F20BB0A263C6A5A005E370F /* LipoBuddyTests */,
 				4FD38D6725C9CDC100E7B1A1 /* Products */,
 				E1B03D6873305986ED16E5E7 /* Pods */,
 				2FFB2EEA27E8E619F338E6CF /* Frameworks */,
@@ -72,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				4FD38D6625C9CDC100E7B1A1 /* LipoBuddy.app */,
+				4F20BB09263C6A5A005E370F /* LipoBuddyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,17 +131,21 @@
 		4FD38D6825C9CDC100E7B1A1 /* LipoBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				4F20BB01263C68B8005E370F /* Model.xcdatamodeld */,
+				4F775452263B545E00C5F8A0 /* Battery+CoreDataClass.swift */,
+				4F775453263B545E00C5F8A0 /* Battery+CoreDataProperties.swift */,
+				4F3D9D96260A9F9E006EF2DF /* Battery */,
 				4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */,
 				4FD38D6B25C9CDC100E7B1A1 /* MainView.swift */,
 				4FE7DFD8260971B9001B8C64 /* BatteriesView.swift */,
 				4FD38D6D25C9CDC200E7B1A1 /* Assets.xcassets */,
 				4FD38D7225C9CDC200E7B1A1 /* Info.plist */,
 				4FD38D6F25C9CDC200E7B1A1 /* Preview Content */,
-				4F434A7E25C9DEBC005259D9 /* Model.xcdatamodeld */,
 				4F5146A225C9E9CA0009D11B /* Persistence.swift */,
 				4F93A9A925DF1EE700168835 /* Colours.xcassets */,
 				4FE7DFD526096CB4001B8C64 /* SettingsView.swift */,
 				4FE7DFDB26097200001B8C64 /* UtilView.swift */,
+				4FE7DFE8260A5CB3001B8C64 /* AircraftView.swift */,
 			);
 			path = LipoBuddy;
 			sourceTree = "<group>";
@@ -114,6 +170,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4F20BB08263C6A5A005E370F /* LipoBuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F20BB10263C6A5A005E370F /* Build configuration list for PBXNativeTarget "LipoBuddyTests" */;
+			buildPhases = (
+				4F20BB05263C6A5A005E370F /* Sources */,
+				4F20BB06263C6A5A005E370F /* Frameworks */,
+				4F20BB07263C6A5A005E370F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F20BB0F263C6A5A005E370F /* PBXTargetDependency */,
+			);
+			name = LipoBuddyTests;
+			productName = LipoBuddyTests;
+			productReference = 4F20BB09263C6A5A005E370F /* LipoBuddyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4FD38D6525C9CDC100E7B1A1 /* LipoBuddy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FD38D7525C9CDC200E7B1A1 /* Build configuration list for PBXNativeTarget "LipoBuddy" */;
@@ -141,9 +215,13 @@
 		4FD38D5E25C9CDC100E7B1A1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					4F20BB08263C6A5A005E370F = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 4FD38D6525C9CDC100E7B1A1;
+					};
 					4FD38D6525C9CDC100E7B1A1 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -165,11 +243,19 @@
 			projectRoot = "";
 			targets = (
 				4FD38D6525C9CDC100E7B1A1 /* LipoBuddy */,
+				4F20BB08263C6A5A005E370F /* LipoBuddyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4F20BB07263C6A5A005E370F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4FD38D6425C9CDC100E7B1A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,6 +311,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4F20BB05263C6A5A005E370F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F20BB0C263C6A5A005E370F /* LipoBuddyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4FD38D6225C9CDC100E7B1A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,16 +326,71 @@
 				4FE7DFD626096CB4001B8C64 /* SettingsView.swift in Sources */,
 				4FD38D6C25C9CDC100E7B1A1 /* MainView.swift in Sources */,
 				4FE7DFDC26097200001B8C64 /* UtilView.swift in Sources */,
+				4F775455263B545E00C5F8A0 /* Battery+CoreDataProperties.swift in Sources */,
 				4FE7DFD9260971B9001B8C64 /* BatteriesView.swift in Sources */,
+				4FF432F1263C439A005DFA88 /* BatteryUtil.swift in Sources */,
+				4FE7DFE9260A5CB3001B8C64 /* AircraftView.swift in Sources */,
 				4F5146A325C9E9CA0009D11B /* Persistence.swift in Sources */,
 				4FD38D6A25C9CDC100E7B1A1 /* LipoBuddyApp.swift in Sources */,
-				4F434A8025C9DEBC005259D9 /* Model.xcdatamodeld in Sources */,
+				4F3D9D98260A9FB4006EF2DF /* BatteryTypeListView.swift in Sources */,
+				4F775454263B545E00C5F8A0 /* Battery+CoreDataClass.swift in Sources */,
+				4F20BB04263C68B8005E370F /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4F20BB0F263C6A5A005E370F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FD38D6525C9CDC100E7B1A1 /* LipoBuddy */;
+			targetProxy = 4F20BB0E263C6A5A005E370F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		4F20BB11263C6A5A005E370F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VUVM5BX895;
+				INFOPLIST_FILE = LipoBuddyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = oliverbutler.LipoBuddyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LipoBuddy.app/LipoBuddy";
+			};
+			name = Debug;
+		};
+		4F20BB12263C6A5A005E370F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VUVM5BX895;
+				INFOPLIST_FILE = LipoBuddyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = oliverbutler.LipoBuddyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LipoBuddy.app/LipoBuddy";
+			};
+			name = Release;
+		};
 		4FD38D7325C9CDC200E7B1A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -407,6 +556,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4F20BB10263C6A5A005E370F /* Build configuration list for PBXNativeTarget "LipoBuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F20BB11263C6A5A005E370F /* Debug */,
+				4F20BB12263C6A5A005E370F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4FD38D6125C9CDC100E7B1A1 /* Build configuration list for PBXProject "LipoBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -428,12 +586,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4F434A7E25C9DEBC005259D9 /* Model.xcdatamodeld */ = {
+		4F20BB01263C68B8005E370F /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4F434A7F25C9DEBC005259D9 /* Model.xcdatamodel */,
+				4F20BB02263C68B8005E370F /* Model 2.xcdatamodel */,
+				4F20BB03263C68B8005E370F /* Model.xcdatamodel */,
 			);
-			currentVersion = 4F434A7F25C9DEBC005259D9 /* Model.xcdatamodel */;
+			currentVersion = 4F20BB02263C68B8005E370F /* Model 2.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
