@@ -9,19 +9,19 @@
     <entity name="Battery" representedClassName="Battery" syncable="YES">
         <attribute name="capacity" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="cellCount" attributeType="Integer 64" usesScalarValueType="YES"/>
+        <attribute name="cellVoltage" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="createdTimestamp" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="cycleCount" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
         <attribute name="notes" attributeType="String" defaultValueString=""/>
-        <attribute name="number" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="voltage" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="aircrafts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Aircraft"/>
         <relationship name="batteryEvents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="BatteryEvent"/>
         <relationship name="batteryType" maxCount="1" deletionRule="Nullify" destinationEntity="BatteryType"/>
     </entity>
-    <entity name="BatteryEvent" representedClassName="BatteryEvent" syncable="YES" codeGenerationType="class">
-        <attribute name="endVoltage" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="startVoltage" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    <entity name="BatteryEvent" representedClassName="BatteryEvent" syncable="YES">
+        <attribute name="endCellVoltage" attributeType="Float" minValueString="0" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="startCellVoltage" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="flight" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Flight"/>
     </entity>
     <entity name="BatteryType" representedClassName="BatteryType" syncable="YES" codeGenerationType="class">
@@ -39,9 +39,9 @@
         <relationship name="aircraft" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Aircraft"/>
     </entity>
     <elements>
-        <element name="Aircraft" positionX="-299.096923828125" positionY="-120.4207153320312" width="128" height="103"/>
+        <element name="Aircraft" positionX="-299.096923828125" positionY="-120.4207153320312" width="128" height="89"/>
         <element name="Battery" positionX="-268.9354858398438" positionY="68.80297851562494" width="128" height="179"/>
-        <element name="BatteryEvent" positionX="-465.5709228515625" positionY="45.5856018066406" width="128" height="103"/>
+        <element name="BatteryEvent" positionX="-465.5709228515625" positionY="45.5856018066406" width="128" height="89"/>
         <element name="BatteryType" positionX="-242.9617919921875" positionY="326.3968658447264" width="128" height="89"/>
         <element name="Flight" positionX="-517.0152587890625" positionY="-197.7183227539062" width="128" height="119"/>
     </elements>

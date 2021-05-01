@@ -16,21 +16,17 @@ extension Battery {
         return NSFetchRequest<Battery>(entityName: "Battery")
     }
 
+    @NSManaged public var name: String
     @NSManaged public var capacity: Int64
     @NSManaged public var cellCount: Int64
     @NSManaged public var createdTimestamp: Date?
     @NSManaged public var cycleCount: Float
     @NSManaged public var notes: String?
-    @NSManaged public var number: Int64
-    @NSManaged public var voltage: Float
+    @NSManaged public var cellVoltage: Float
     @NSManaged public var aircrafts: NSSet?
     @NSManaged public var batteryEvents: NSSet?
     @NSManaged public var batteryType: BatteryType?
-    
-    
-    public var cellVoltage: Float {
-        voltage / Float(cellCount);
-    }
+
 
 }
 

@@ -37,7 +37,7 @@ struct SettingsView: View {
             }
             Section(header: Text("RESET")) {
                 Button("Clear all Data") {
-                    InitCoreData();
+                    initCoreData();
                 }
             }
         }.navigationTitle("Settings")

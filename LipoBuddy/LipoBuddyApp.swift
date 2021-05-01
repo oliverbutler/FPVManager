@@ -8,40 +8,78 @@
 import SwiftUI
 import CoreData
 
-func InitCoreData() {
+func initCoreData() {
     
     let viewContext = PersistenceController.shared.container.viewContext;
-    
-    // Create Fetch Request
+
     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "BatteryType")
-
-    // Create Batch Delete Request
-    let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-
-    do {
-        try viewContext.execute(batchDeleteRequest)
-    } catch {
-        // Error Handling
+    
+    var hasLipo = false;
+    var hasLihv = false;
+    var hasLion = false;
+    
+    func makeLipo(type: BatteryType) {
+        type.name = "LiPo"
+        type.cellMinVoltage = 3.3
+        type.cellMaxVoltage = 4.2
+        type.cellStorageVoltage = 3.8
     }
     
+    func makeLihv(type: BatteryType) {
+        type.name = "LiHV"
+        type.cellMinVoltage = 3.3
+        type.cellMaxVoltage = 4.35
+        type.cellStorageVoltage = 3.8
+    }
     
-    let liPo = BatteryType(context: viewContext)
-    liPo.name = "LiPo"
-    liPo.cellMinVoltage = 3.3
-    liPo.cellMaxVoltage = 4.2
-    liPo.cellStorageVoltage = 3.8
+    func makelion(type: BatteryType) {
+        type.name = "Li-Ion"
+        type.cellMinVoltage = 3.4
+        type.cellMaxVoltage = 4.2
+        type.cellStorageVoltage = 3.8
+    }
     
-    let liHV = BatteryType(context: viewContext)
-    liHV.name = "LiHV"
-    liHV.cellMinVoltage = 3.3
-    liHV.cellMaxVoltage = 4.35
-    liHV.cellStorageVoltage = 3.8
+    do {
+        let batteryTypes = try viewContext.fetch(fetchRequest)
+
+        // Update any existing batteries
+        for batteryType in batteryTypes as! [BatteryType] {
+//            print(batteryType.name ?? "?")
+            switch batteryType.name {
+            case "LiPo":
+                if(hasLipo) { viewContext.delete(batteryType); }
+                hasLipo = true;
+                makeLipo(type: batteryType)
+            case "LiHV":
+                if(hasLihv) { viewContext.delete(batteryType); }
+                hasLihv = true;
+                makeLihv(type: batteryType)
+            case "Li-Ion":
+                if(hasLion) { viewContext.delete(batteryType); }
+                hasLion = true;
+                makelion(type: batteryType)
+            default:
+                viewContext.delete(batteryType)
+            }
+        }
+    } catch {
+        print(error)
+    }
     
-    let lion = BatteryType(context: viewContext)
-    lion.name = "Li-Ion"
-    lion.cellMinVoltage = 3.4
-    lion.cellStorageVoltage = 3.8
-    lion.cellMaxVoltage = 4.2
+    if(!hasLipo) {
+        let liPo = BatteryType(context: viewContext)
+        makeLipo(type: liPo);
+    }
+    
+    if(!hasLihv) {
+        let liHV = BatteryType(context: viewContext)
+        makeLihv(type: liHV)
+    }
+    
+    if(!hasLion) {
+        let lion = BatteryType(context: viewContext)
+        makelion(type: lion)
+    }
     
     PersistenceController.shared.save();
 }
@@ -53,14 +91,7 @@ struct LipoBuddyApp: App {
     let persistenceContainer = PersistenceController.shared
     
     func onAppLoad() {
-//        let hasLaunchedKey = "HasLaunched"
-//        let defaults = UserDefaults.standard
-//        let hasLaunched = defaults.bool(forKey: hasLaunchedKey)
-//
-//        if !hasLaunched {
-        InitCoreData()
-//            defaults.set(true, forKey: hasLaunchedKey)
-//        }
+        initCoreData()
     }
     
     var body: some Scene {

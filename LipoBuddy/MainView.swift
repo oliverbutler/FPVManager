@@ -17,19 +17,16 @@ struct MainView: View {
     private var allBatteries: FetchedResults<Battery>
     
     private var chargedBatteries: Array<Battery> {
-        allBatteries.filter { $0.cellVoltage > $0.batteryType!.cellStorageVoltage + 0.1 }
+        allBatteries.filter { $0.status == BatteryStatus.charged; }
     }
     
     private var storageBatteries: Array<Battery> {
-        allBatteries.filter {
-            $0.cellVoltage >= $0.batteryType!.cellStorageVoltage - 0.1 &&
-                $0.cellVoltage <= $0.batteryType!.cellStorageVoltage + 0.1
-        }
+        allBatteries.filter { $0.status == BatteryStatus.storage; }
     }
     
     private var emptyBatteries: Array<Battery> {
         allBatteries.filter {
-            $0.cellVoltage < $0.batteryType!.cellStorageVoltage
+            $0.status == BatteryStatus.low || $0.status == BatteryStatus.danger
         }
     }
     
@@ -67,12 +64,14 @@ struct MainView: View {
                     }
                 }
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
                 Label("Overview", systemImage: "house")
             }
             NavigationView {
                 BatteriesView()
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
                 Label("Batteries", systemImage: "battery.100.bolt")
             }
@@ -98,7 +97,7 @@ struct ContentView_Previews: PreviewProvider {
         Group {
             MainView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
-                .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+//                .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
         }
     }
 }
