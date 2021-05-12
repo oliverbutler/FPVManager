@@ -22,7 +22,9 @@ struct StaticTextField: View {
 
 struct BatteriesView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: Battery.entity(), sortDescriptors: [])
+    @FetchRequest(entity: Battery.entity(), sortDescriptors: [
+        NSSortDescriptor(keyPath: \Battery.cellVoltage, ascending: false)
+    ])
     private var batteries: FetchedResults<Battery>
     
     private func deleteBattery(offsets: IndexSet) {

@@ -18,6 +18,8 @@
 		4F93A9AA25DF1EE700168835 /* Colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F93A9A925DF1EE700168835 /* Colours.xcassets */; };
 		4FBBAD06263C97B000141154 /* BatteryEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBBAD04263C97B000141154 /* BatteryEvent+CoreDataClass.swift */; };
 		4FBBAD07263C97B000141154 /* BatteryEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBBAD05263C97B000141154 /* BatteryEvent+CoreDataProperties.swift */; };
+		4FBD217526497C2C00559738 /* ChargingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD217426497C2C00559738 /* ChargingView.swift */; };
+		4FBD217826497D5D00559738 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD217726497D5D00559738 /* DashboardView.swift */; };
 		4FD38D6A25C9CDC100E7B1A1 /* LipoBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */; };
 		4FD38D6C25C9CDC100E7B1A1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD38D6B25C9CDC100E7B1A1 /* MainView.swift */; };
 		4FD38D6E25C9CDC200E7B1A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD38D6D25C9CDC200E7B1A1 /* Assets.xcassets */; };
@@ -56,11 +58,13 @@
 		4F2A2CCD263CA89E00763E67 /* BatteryHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryHistoryView.swift; sourceTree = "<group>"; };
 		4F3D9D97260A9FB4006EF2DF /* BatteryTypeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryTypeListView.swift; sourceTree = "<group>"; };
 		4F5146A225C9E9CA0009D11B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		4F775452263B545E00C5F8A0 /* Battery+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Battery+CoreDataClass.swift"; path = "LipoBuddy/Battery/Battery+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		4F775453263B545E00C5F8A0 /* Battery+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Battery+CoreDataProperties.swift"; path = "LipoBuddy/Battery/Battery+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		4F775452263B545E00C5F8A0 /* Battery+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Battery+CoreDataClass.swift"; path = "LipoBuddy/Models/Battery+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		4F775453263B545E00C5F8A0 /* Battery+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Battery+CoreDataProperties.swift"; path = "LipoBuddy/Models/Battery+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		4F93A9A925DF1EE700168835 /* Colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colours.xcassets; sourceTree = "<group>"; };
 		4FBBAD04263C97B000141154 /* BatteryEvent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BatteryEvent+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4FBBAD05263C97B000141154 /* BatteryEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BatteryEvent+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4FBD217426497C2C00559738 /* ChargingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingView.swift; sourceTree = "<group>"; };
+		4FBD217726497D5D00559738 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		4FD38D6625C9CDC100E7B1A1 /* LipoBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LipoBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipoBuddyApp.swift; sourceTree = "<group>"; };
 		4FD38D6B25C9CDC100E7B1A1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -122,11 +126,8 @@
 		4F3D9D96260A9F9E006EF2DF /* Battery */ = {
 			isa = PBXGroup;
 			children = (
-				4F775453263B545E00C5F8A0 /* Battery+CoreDataProperties.swift */,
-				4F775452263B545E00C5F8A0 /* Battery+CoreDataClass.swift */,
 				4F3D9D97260A9FB4006EF2DF /* BatteryTypeListView.swift */,
 				4FF432F0263C439A005DFA88 /* BatteryUtil.swift */,
-				4FE7DFD8260971B9001B8C64 /* BatteriesView.swift */,
 				4F2A2CCB263C9FC500763E67 /* BatteryView.swift */,
 				4FF5F3F7263D7C0700072FBC /* BatteryUpdateView.swift */,
 				4F2A2CCD263CA89E00763E67 /* BatteryHistoryView.swift */,
@@ -141,10 +142,68 @@
 		4FBBAD03263C979300141154 /* BatteryEvent */ = {
 			isa = PBXGroup;
 			children = (
-				4FBBAD04263C97B000141154 /* BatteryEvent+CoreDataClass.swift */,
-				4FBBAD05263C97B000141154 /* BatteryEvent+CoreDataProperties.swift */,
 			);
 			path = BatteryEvent;
+			sourceTree = "<group>";
+		};
+		4FBD217326497BF900559738 /* Charging */ = {
+			isa = PBXGroup;
+			children = (
+				4FBD217426497C2C00559738 /* ChargingView.swift */,
+			);
+			path = Charging;
+			sourceTree = "<group>";
+		};
+		4FBD217626497D5300559738 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				4FBD217726497D5D00559738 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		4FBD21792649811A00559738 /* Batteries */ = {
+			isa = PBXGroup;
+			children = (
+				4FE7DFD8260971B9001B8C64 /* BatteriesView.swift */,
+			);
+			path = Batteries;
+			sourceTree = "<group>";
+		};
+		4FBD217A2649813C00559738 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4FE7DFD526096CB4001B8C64 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		4FBD217B2649814C00559738 /* Aircraft */ = {
+			isa = PBXGroup;
+			children = (
+				4FE7DFE8260A5CB3001B8C64 /* AircraftView.swift */,
+			);
+			path = Aircraft;
+			sourceTree = "<group>";
+		};
+		4FBD217C2649816E00559738 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4FE7DFDB26097200001B8C64 /* UtilView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4FBD217D264981D500559738 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4F775453263B545E00C5F8A0 /* Battery+CoreDataProperties.swift */,
+				4F775452263B545E00C5F8A0 /* Battery+CoreDataClass.swift */,
+				4FBBAD04263C97B000141154 /* BatteryEvent+CoreDataClass.swift */,
+				4FBBAD05263C97B000141154 /* BatteryEvent+CoreDataProperties.swift */,
+				4F20BB01263C68B8005E370F /* Model.xcdatamodeld */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4FD38D5D25C9CDC100E7B1A1 = {
@@ -172,18 +231,21 @@
 			children = (
 				4FD38D6925C9CDC100E7B1A1 /* LipoBuddyApp.swift */,
 				4FD38D6B25C9CDC100E7B1A1 /* MainView.swift */,
+				4F5146A225C9E9CA0009D11B /* Persistence.swift */,
+				4FBD217D264981D500559738 /* Models */,
+				4FBD21792649811A00559738 /* Batteries */,
+				4FBD217626497D5300559738 /* Dashboard */,
+				4FBD217326497BF900559738 /* Charging */,
 				4FBBAD03263C979300141154 /* BatteryEvent */,
 				4F3D9D96260A9F9E006EF2DF /* Battery */,
 				4FECF1E6263C9DBA00FBDF54 /* Flight */,
-				4FE7DFD526096CB4001B8C64 /* SettingsView.swift */,
-				4FE7DFDB26097200001B8C64 /* UtilView.swift */,
-				4FE7DFE8260A5CB3001B8C64 /* AircraftView.swift */,
+				4FBD217B2649814C00559738 /* Aircraft */,
+				4FBD217A2649813C00559738 /* Settings */,
+				4FBD217C2649816E00559738 /* Utils */,
 				4FD38D7225C9CDC200E7B1A1 /* Info.plist */,
-				4F5146A225C9E9CA0009D11B /* Persistence.swift */,
-				4F20BB01263C68B8005E370F /* Model.xcdatamodeld */,
-				4FD38D6F25C9CDC200E7B1A1 /* Preview Content */,
 				4F93A9A925DF1EE700168835 /* Colours.xcassets */,
 				4FD38D6D25C9CDC200E7B1A1 /* Assets.xcassets */,
+				4FD38D6F25C9CDC200E7B1A1 /* Preview Content */,
 			);
 			path = LipoBuddy;
 			sourceTree = "<group>";
@@ -369,6 +431,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FBD217526497C2C00559738 /* ChargingView.swift in Sources */,
+				4FBD217826497D5D00559738 /* DashboardView.swift in Sources */,
 				4FE7DFD626096CB4001B8C64 /* SettingsView.swift in Sources */,
 				4FF5F3FA263D86BE00072FBC /* BatteryIconView.swift in Sources */,
 				4FD38D6C25C9CDC100E7B1A1 /* MainView.swift in Sources */,

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BatteryIconView: View {
     
-    let battery: Battery
+    @ObservedObject var battery: Battery
     
     var body: some View {
         switch(battery.status) {

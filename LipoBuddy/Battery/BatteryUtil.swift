@@ -33,9 +33,18 @@ public func addBatteryEvent(viewContext: NSManagedObjectContext, batt: Battery, 
     batt.cellVoltage = newCellVoltage;
     
     
-    
-    
     PersistenceController.shared.save();
+}
+
+/**
+ Takes an array of batteries and a C rating and returns the optimal charge current
+ */
+public func getChargeVoltage(cRating: Int, batteries: Array<Battery>) -> Float {
+    var currentTotal: Float = 0.0;
+    for batt in batteries {
+        currentTotal += Float(cRating) * (Float(batt.capacity) / 1000);
+    }
+    return currentTotal;
 }
 
 

@@ -13,17 +13,22 @@ import CoreData
 struct MainView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
-    @FetchRequest(entity: Battery.entity(), sortDescriptors: [])
+    @FetchRequest(entity: Battery.entity(), sortDescriptors: [
+        NSSortDescriptor(keyPath: \Battery.cellVoltage, ascending: false)
+    ])
     private var allBatteries: FetchedResults<Battery>
     
+    // Find all batteries which are charged
     private var chargedBatteries: Array<Battery> {
         allBatteries.filter { $0.status == BatteryStatus.charged; }
     }
     
+    // Find all storage batteries
     private var storageBatteries: Array<Battery> {
         allBatteries.filter { $0.status == BatteryStatus.storage; }
     }
     
+    // Find all empty batteries (or "danger" batteries)
     private var emptyBatteries: Array<Battery> {
         allBatteries.filter {
             $0.status == BatteryStatus.low || $0.status == BatteryStatus.danger
@@ -33,62 +38,32 @@ struct MainView: View {
     var body: some View {
         TabView {
             NavigationView {
-                VStack {
-                    HStack {
-                        NavigationLink(
-                            destination: BatteriesViewManual(batteries: chargedBatteries, title: "Charged Batteries"),
-                            label: {
-                                Text(" \(chargedBatteries.count) Charged").padding(10).foregroundColor(Color.white).background(Color.green).cornerRadius(10).font(.headline)
-                            })
-                        NavigationLink(
-                            destination: BatteriesViewManual(batteries: storageBatteries, title: "Storage Batteries"),
-                            label: {
-                                Text(" \(storageBatteries.count) Storage").padding(10).foregroundColor(Color.white).background(Color.yellow).cornerRadius(10).font(.headline)
-                            })
-                        NavigationLink(
-                            destination: BatteriesViewManual(batteries: emptyBatteries, title: "Empty Batteries"),
-                            label: {
-                                Text(" \(emptyBatteries.count) Empty").padding(10).foregroundColor(Color.white).background(Color.red).cornerRadius(10).font(.headline)
-                            })
-                        
-                        
-                    }.padding(.top, 5.0)
-                    Spacer()
-                }
-                .navigationTitle("Dashboard")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        NavigationLink(destination: SettingsView()) {
-                            Image(systemName: "gearshape")
-                        }
-                    }
-                }
+                DashboardView(chargedBatteries: chargedBatteries, storageBatteries: storageBatteries, emptyBatteries: emptyBatteries)
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
                 Label("Overview", systemImage: "house")
             }
+            
             NavigationView {
                 BatteriesView()
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
-                Label("Batteries", systemImage: "battery.100.bolt")
+                Label("Batteries", systemImage: "battery.100")
             }
             .tag(1)
             
-            Text("First View")
+            NavigationView {
+                ChargingView(batteries: allBatteries);
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
-                Label("Flying", systemImage: "airplane")
+                Label("Charging", systemImage: "battery.100.bolt")
             }
             .tag(2)
         }
         .accentColor(ColourManager.appAccent)
-        .onAppear {
-//           let predicate = NSPredicate(format: "number = %@", "1")
-//            batteries.predicate
-//            test()
-        }
     }
 }
 

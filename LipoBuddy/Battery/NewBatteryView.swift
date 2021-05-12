@@ -12,7 +12,7 @@ import SwiftUI
  */
 struct NewBatteryView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.presentationMode) var presentationMode
     
     @FetchRequest(entity: BatteryType.entity(), sortDescriptors: [])
     var batteryTypes: FetchedResults<BatteryType>
@@ -29,7 +29,6 @@ struct NewBatteryView: View {
             Section(header: Text("BATTERY")) {
                 FloatingTextField(title: "Battery ID", text: $batteryId, type: "string", units: "")
                 FloatingTextField(title: "Capacity", text: $batteryCapacity, type: "int", units: "MaH")
-//                FloatingTextField(title: "Cell Count", text: $batteryCellCount, type: "int", units: "")
                 FloatingTextField(title: "Pack Voltage", text: $batteryVoltage, type: "dec", units: "V")
                 StepperView(value: batteryCellCount);
             }
@@ -45,6 +44,7 @@ struct NewBatteryView: View {
             Section {
                 Button(action: {
                     addBattery(name: batteryId, cellCount: String(batteryCellCount), capacity: batteryCapacity, voltage: batteryVoltage)
+                    self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Create new Battery")
                 }
@@ -52,10 +52,10 @@ struct NewBatteryView: View {
             }
         }
         .navigationTitle("New Battery")
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     private func addBattery(name: String, cellCount: String, capacity: String, voltage: String) {
-        
         withAnimation {
             let newBattery = Battery(context: viewContext)
             newBattery.name = name
@@ -70,7 +70,6 @@ struct NewBatteryView: View {
             
             PersistenceController.shared.save();
             
-            self.presentationMode.wrappedValue.dismiss()
         }
     }
 }

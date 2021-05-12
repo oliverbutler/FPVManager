@@ -21,7 +21,7 @@ struct BatteryRowView: View {
         HStack {
             BatteryIconView(battery: batt)
             VStack {
-                Text(String( format: "%.2fV", batt.cellVoltage))
+                Text(String(format: "%.2fV", batt.cellVoltage))
                 Text(String(format: "%.2fV", batt.voltage))
             }.padding(.trailing, 25)
             
