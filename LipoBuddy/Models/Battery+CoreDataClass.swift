@@ -35,13 +35,13 @@ public class Battery: NSManagedObject {
         
         let tol: Float = 0.1;
         
-        if cellVoltage > batteryType!.cellStorageVoltage + tol {
+        if cellVoltage > batteryType?.cellStorageVoltage ?? 0.0 + tol {
             return BatteryStatus.charged;
         }
-        if cellVoltage > batteryType!.cellStorageVoltage - tol {
+        if cellVoltage > batteryType?.cellStorageVoltage ?? 0.0 - tol {
             return BatteryStatus.storage;
         }
-        if cellVoltage > batteryType!.cellMinVoltage {
+        if cellVoltage > batteryType?.cellMinVoltage ?? 0.0 {
             return BatteryStatus.low;
         }
         return BatteryStatus.danger;
